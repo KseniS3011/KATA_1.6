@@ -45,7 +45,6 @@ buttonsClose.forEach((buttonClose) => {
     menu.classList.remove('menu')
     menuFeedback.classList.remove('menu-feedback')
     menuFeedback.classList.add('menu-feedback--closed')
-    // background.classList.remove('menu-feedback__container-background')
     background.classList.remove('container-background')
     background.classList.add('container-background--hidden')
   }
@@ -60,7 +59,6 @@ buttonsChat.forEach((buttonChat) => {
     menuFeedback.classList.add('menu-feedback')
     background.classList.remove('container-background--hidden')
     background.classList.add('container-background')
-    // background.classList.add('menu-feedback__container-background')
     inputName.removeAttribute('hidden')
     inputEmail.removeAttribute('hidden')
     inputText.removeAttribute('hidden')
@@ -78,7 +76,6 @@ buttonsCall.forEach((buttonCall) => {
     menuFeedback.classList.add('menu-feedback')
     background.classList.remove('container-background--hidden')
     background.classList.add('container-background')
-    // background.classList.add('menu-feedback__container-background')
     inputName.setAttribute('hidden', 'hidden')
     inputEmail.setAttribute('hidden', 'hidden')
     inputText.setAttribute('hidden', 'hidden')
@@ -88,7 +85,6 @@ buttonsCall.forEach((buttonCall) => {
 })
 
 function backgroundClick() {
-  // background.classList.remove('menu-feedback__container-background')
   background.classList.remove('container-background')
   background.classList.add('container-background--hidden')
   menu.classList.remove('menu')
