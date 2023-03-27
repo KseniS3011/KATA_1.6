@@ -57,6 +57,5 @@
   "dependencies": {
     "sass": "^1.59.3",
     "swiper": "^9.1.1"
-  },
-  "homepage": "https://KseniS3011.github.io/KATA_project_1.6"
+  }
 }
