@@ -167,12 +167,6 @@ textarea {
   margin: 0; /* 2 */
 }
 
-/* input{
-  font-family: inherit; 
-  line-height: 1.15; 
-  margin: 0; 
-} */
-
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -384,9 +378,6 @@ body {
   margin: 0 auto;
   padding: 0; }
 
-body {
-  overflow-x: hidden; }
-
 ul,
 li,
 h1,
@@ -413,7 +404,8 @@ a:link, a:visited {
   text-decoration: none; }
 
 .page-container {
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
 
 .content-container {
   position: relative;
@@ -839,7 +831,6 @@ a:link, a:visited {
   justify-content: space-between;
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   z-index: 2;
   min-width: 320px;
@@ -859,7 +850,6 @@ a:link, a:visited {
   justify-content: space-between;
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   z-index: 2;
   min-width: 320px;
@@ -868,13 +858,11 @@ a:link, a:visited {
   background-color: white;
   transition: transform 0.7s ease-in-out;
   transform: translateX(0); }
-  .menu__container-sticky {
-    position: sticky;
-    top: 18px; }
   .menu__heading {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 26px; }
+    margin-bottom: 26px;
+    margin-top: 30px; }
   .menu__list {
     display: flex;
     align-items: center; }
@@ -965,7 +953,6 @@ a:link, a:visited {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
   z-index: 1;
   width: 320px;
   max-width: 440px;
@@ -973,9 +960,9 @@ a:link, a:visited {
   background-color: white;
   padding: 0 16px;
   box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2), -2px 0 4px rgba(69, 79, 126, 0.02);
-  transition: transform 0.7s ease-in-out;
-  transform-origin: right;
-  transform: translateX(600px);
+  transform-origin: left;
+  transform: translate(700px);
+  transition: transform 1s;
   box-sizing: border-box;
   z-index: 2; }
   .menu-feedback--closed button[type='button'] {
@@ -985,10 +972,9 @@ a:link, a:visited {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
   z-index: 1;
   width: 320px;
   max-width: 440px;
@@ -996,13 +982,13 @@ a:link, a:visited {
   background-color: white;
   padding: 0 16px;
   box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2), -2px 0 4px rgba(69, 79, 126, 0.02);
-  transition: transform 0.7s ease-in-out;
-  transform-origin: right;
+  transition: transform 0.7s;
+  transform-origin: left;
   transform: translateX(0);
   box-sizing: border-box;
   z-index: 2; }
   .menu-feedback__container {
-    position: sticky;
+    position: absolute;
     top: 32px; }
   .menu-feedback button[type='button'] {
     margin-bottom: 32px; }
@@ -1622,8 +1608,7 @@ a:link, a:visited {
     max-width: 440px;
     width: 100%;
     padding: 0 32px;
-    z-index: 4;
-    opacity: 1; }
+    z-index: 4; }
     .menu-feedback__form {
       max-width: 376px; }
     .menu-feedback button[type='button'] {
@@ -1641,8 +1626,7 @@ a:link, a:visited {
     padding: 0 32px;
     transform-origin: right;
     transform: translate(700px);
-    opacity: 0;
-    transition: transform 1s, opacity 0.1ms 1s; }
+    transition: transform 1s; }
     .menu-feedback--closed__form {
       max-width: 376px; }
     .menu-feedback--closed button[type='button'] {
