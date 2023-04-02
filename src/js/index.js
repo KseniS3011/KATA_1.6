@@ -15,6 +15,7 @@ const background = document.querySelector('.container-background--hidden')
 const inputName = document.querySelector('input[name=name]')
 const inputEmail = document.querySelector('input[name=email]')
 const inputText = document.querySelector('textarea[name=text]')
+const inputPhone = document.querySelector('input[name=phone]')
 const feedbackName = document.querySelector(
   '.menu-feedback__heading:first-child'
 )
@@ -60,6 +61,7 @@ buttonsChat.forEach((buttonChat) => {
     background.classList.remove('container-background--hidden')
     background.classList.add('container-background')
     inputName.removeAttribute('hidden')
+    inputName.focus()
     inputEmail.removeAttribute('hidden')
     inputText.removeAttribute('hidden')
     feedbackName.removeAttribute('hidden')
@@ -79,8 +81,10 @@ buttonsCall.forEach((buttonCall) => {
     inputName.setAttribute('hidden', 'hidden')
     inputEmail.setAttribute('hidden', 'hidden')
     inputText.setAttribute('hidden', 'hidden')
+    
     callName.removeAttribute('hidden')
     feedbackName.setAttribute('hidden', 'hidden')
+    inputPhone.focus()
   }
 })
 
